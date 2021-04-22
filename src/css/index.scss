@@ -1,0 +1,127 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Noto Sans TC', sans-serif;
+}
+
+html, body, #root{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.nav{
+    background-color: rgb(238, 6, 6);
+    font-size: 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 15vh;
+}
+
+.addList{
+    width: 100%;
+    margin-top: 1rem;
+    height: 10vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    form{
+        width: 50%;
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+        
+        input{
+            width: 15vw;
+            height: 5vw;
+            font-size: 2.5rem;
+        }
+
+        select{
+            width: 5vw;
+            height: 5vw;
+            font-size: 1.5rem;
+        }
+
+        button{
+            width: 10vw;
+            height: 5vw;
+            background-color: burlywood;
+            border-radius: 10px;
+            font-size: 2.5rem;
+        }
+    }
+}
+
+.main{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    table{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        border-collapse: collapse; //合併td的邊界
+        width: 70%;
+        tr{
+            display: flex;
+            align-items: center;
+            // border: 1px black solid;
+
+            .titleName{
+                padding: 2vw 10vw 2vw 2vw;
+                font-size: 5rem;
+            }
+
+            .message{
+                tr{
+                    position: relative;
+                    td{
+                        padding: 1vw;
+                    }
+                    .msg{
+                        padding-right: 3vw;
+                    }
+                    .deleteLine_1, .deleteLine_2{
+                        position: absolute;
+                        top: 50%;
+                        z-index: 10;
+                        width: 100%;
+                        height: 0.2vh;
+                        background-color: black;
+                        display: none;
+                    }
+                    .checkBtn, .clearBtn{
+                        cursor: pointer;
+                    }
+                }
+            } 
+
+        }
+    }
+
+    .line{
+        width: 70%;
+        background-color: black;
+        height: 1vh;
+    }
+}
+
+footer{
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    height: 10vh;
+    // background-image: url(/public/images/wave.png);
+    img{
+        width: 5vw;
+        height: 5vw;
+        margin: 0.5vw;
+    }
+}

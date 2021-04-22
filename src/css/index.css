@@ -1,0 +1,180 @@
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-family: 'Noto Sans TC', sans-serif;
+}
+
+html, body, #root {
+  width: 100%;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.nav {
+  background-color: #ee0606;
+  font-size: 2rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 15vh;
+}
+
+.addList {
+  width: 100%;
+  margin-top: 1rem;
+  height: 10vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.addList form {
+  width: 50%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.addList form input {
+  width: 15vw;
+  height: 5vw;
+  font-size: 2.5rem;
+}
+
+.addList form select {
+  width: 5vw;
+  height: 5vw;
+  font-size: 1.5rem;
+}
+
+.addList form button {
+  width: 10vw;
+  height: 5vw;
+  background-color: burlywood;
+  border-radius: 10px;
+  font-size: 2.5rem;
+}
+
+.main {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.main table {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  border-collapse: collapse;
+  width: 70%;
+}
+
+.main table tr {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.main table tr .titleName {
+  padding: 2vw 10vw 2vw 2vw;
+  font-size: 5rem;
+}
+
+.main table tr .message tr {
+  position: relative;
+}
+
+.main table tr .message tr td {
+  padding: 1vw;
+}
+
+.main table tr .message tr .msg {
+  padding-right: 3vw;
+}
+
+.main table tr .message tr .deleteLine_1, .main table tr .message tr .deleteLine_2 {
+  position: absolute;
+  top: 50%;
+  z-index: 10;
+  width: 100%;
+  height: 0.2vh;
+  background-color: black;
+  display: none;
+}
+
+.main table tr .message tr .checkBtn, .main table tr .message tr .clearBtn {
+  cursor: pointer;
+}
+
+.main .line {
+  width: 70%;
+  background-color: black;
+  height: 1vh;
+}
+
+footer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 10vh;
+}
+
+footer img {
+  width: 5vw;
+  height: 5vw;
+  margin: 0.5vw;
+}
+/*# sourceMappingURL=index.css.map */

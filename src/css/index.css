@@ -170,6 +170,9 @@ footer {
       -ms-flex-align: center;
           align-items: center;
   height: 10vh;
+  background-image: url("../images/wave.png");
+  background-size: cover;
+  background-position: center;
 }
 
 footer img {

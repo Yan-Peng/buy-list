@@ -118,7 +118,9 @@ footer{
     justify-content: center;
     align-items: center;
     height: 10vh;
-    // background-image: url(/public/images/wave.png);
+    background-image: url('../images/wave.png');
+    background-size: cover;
+    background-position: center;
     img{
         width: 5vw;
         height: 5vw;

@@ -3,10 +3,21 @@ import React from "react";
 function Main(props) {
   const deleteNeed = (e) => {
     // console.log(e.target.parentElement.parentElement.childNodes[2].innerText);
+
+    // console.log(
+    //   props.needList.indexOf(
+    //     e.target.parentElement.parentElement.childNodes[2].innerText
+    //   )
+    // );
+
     props.setNeedList(
-      props.needList.filter((list) => {
+      props.needList.filter((list, index) => {
         return (
-          list !== e.target.parentElement.parentElement.childNodes[2].innerText
+          // list !== e.target.parentElement.parentElement.childNodes[2].innerText
+          index !==
+          props.needList.indexOf(
+            e.target.parentElement.parentElement.childNodes[2].innerText
+          )
         );
       })
     );
@@ -15,9 +26,13 @@ function Main(props) {
   const deleteWant = (e) => {
     // console.log(e.target.parentElement.parentElement.childNodes[1].innerText);
     props.setWantList(
-      props.wantList.filter((list) => {
+      props.wantList.filter((list, index) => {
         return (
-          list !== e.target.parentElement.parentElement.childNodes[2].innerText
+          // list !== e.target.parentElement.parentElement.childNodes[2].innerText
+          index !==
+          props.wantList.indexOf(
+            e.target.parentElement.parentElement.childNodes[2].innerText
+          )
         );
       })
     );

@@ -15,11 +15,14 @@ html, body, #root{
 
 .nav{
     background-color: rgb(238, 6, 6);
-    font-size: 2rem;
+    
     display: flex;
     justify-content: center;
     align-items: center;
     height: 15vh;
+    h1{
+        font-size: 4rem;
+    }
 }
 
 .addList{
@@ -30,19 +33,19 @@ html, body, #root{
     justify-content: center;
     align-items: center;
     form{
-        width: 50%;
+        width:100%;
         display: flex;
-        justify-content: space-evenly;
+        justify-content: space-around;
         align-items: center;
         
         input{
-            width: 15vw;
+            width: 80%;
             height: 5vw;
-            font-size: 2.5rem;
+            font-size: 1.5rem;
         }
 
         select{
-            width: 5vw;
+            width: 80%;
             height: 5vw;
             font-size: 1.5rem;
         }
@@ -50,9 +53,10 @@ html, body, #root{
         button{
             width: 10vw;
             height: 5vw;
-            background-color: burlywood;
-            border-radius: 10px;
-            font-size: 2.5rem;
+            // background-color: burlywood;
+            // border-radius: 10px;
+            font-size: 2.5vw;
+            line-height: 1rem;
         }
     }
 }
@@ -63,45 +67,50 @@ html, body, #root{
     align-items: center;
     flex-wrap: wrap;
     table{
+        width: 100%;
         display: flex;
         justify-content: space-between;
         align-items: center;
         border-collapse: collapse; //合併td的邊界
         width: 70%;
-        tr{
-            display: flex;
-            align-items: center;
-            // border: 1px black solid;
-
-            .titleName{
-                padding: 2vw 10vw 2vw 2vw;
-                font-size: 5rem;
-            }
-
-            .message{
-                tr{
-                    position: relative;
-                    td{
-                        padding: 1vw;
-                    }
-                    .msg{
-                        padding-right: 3vw;
-                    }
-                    .deleteLine_1, .deleteLine_2{
-                        position: absolute;
-                        top: 50%;
-                        z-index: 10;
-                        width: 100%;
-                        height: 0.2vh;
-                        background-color: black;
-                        display: none;
-                    }
-                    .checkBtn, .clearBtn{
-                        cursor: pointer;
-                    }
+        tbody{
+            width: 100%;
+            tr{
+                display: flex;
+                align-items: center;
+                // border: 1px black solid;
+    
+                .titleName{
+                    // padding: 2vw 10vw 2vw 2vw;
+                    padding: 2vw;
+                    font-size: 3vw;
+                    width: 30%;
                 }
-            } 
-
+    
+                .message{
+                    tr{
+                        position: relative;
+                        td{
+                            padding: 1vw;
+                        }
+                        .msg{
+                            padding-right: 3vw;
+                        }
+                        .deleteLine_1, .deleteLine_2{
+                            position: absolute;
+                            top: 50%;
+                            z-index: 10;
+                            width: 100%;
+                            height: 0.2vh;
+                            background-color: black;
+                            display: none;
+                        }
+                        .checkBtn, .clearBtn{
+                            cursor: pointer;
+                        }
+                    }
+                } 
+            }
         }
     }
 
@@ -117,7 +126,7 @@ footer{
     width: 100%;
     justify-content: center;
     align-items: center;
-    height: 10vh;
+    height: 13vh;
     background-image: url('../images/wave.png');
     background-size: cover;
     background-position: center;

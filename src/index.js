@@ -6,7 +6,7 @@ import "./css/index.css";
 
 ReactDOM.render(
   <React.StrictMode>
-    <div className="container">
+    <div className="box">
       <Nav />
     </div>
     <Footer />

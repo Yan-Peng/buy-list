@@ -9,6 +9,14 @@ function Main(props) {
     //     e.target.parentElement.parentElement.childNodes[2].innerText
     //   )
     // );
+    let deleteLine = document.querySelectorAll(".deleteLine_1");
+    let item_index =
+      parseInt(e.target.parentElement.parentElement.childNodes[1].innerText) -
+      1;
+    for (let i = item_index; i < deleteLine.length - 1; i++) {
+      //從刪除列開始，下方刪除線狀態取代上方刪除線狀態
+      deleteLine[i].style.display = deleteLine[i + 1].style.display;
+    }
 
     props.setNeedList(
       props.needList.filter((list, index) => {
@@ -25,6 +33,15 @@ function Main(props) {
 
   const deleteWant = (e) => {
     // console.log(e.target.parentElement.parentElement.childNodes[1].innerText);
+    let deleteLine = document.querySelectorAll(".deleteLine_2");
+    let item_index =
+      parseInt(e.target.parentElement.parentElement.childNodes[1].innerText) -
+      1;
+    for (let i = item_index; i < deleteLine.length - 1; i++) {
+      //從刪除列開始，下方刪除線狀態取代上方刪除線狀態
+      deleteLine[i].style.display = deleteLine[i + 1].style.display;
+    }
+
     props.setWantList(
       props.wantList.filter((list, index) => {
         return (
@@ -40,13 +57,9 @@ function Main(props) {
 
   const checkNeed = (e) => {
     let deleteLine = document.querySelectorAll(".deleteLine_1");
-    let index = 0; //欲刪除列的編號
-    let item = e.target.parentElement.parentElement.childNodes[2].innerText; //找到要刪除那一列的資訊
-    for (index = 0; index < props.needList.length; index++) {
-      if (props.needList[index] === item) {
-        break;
-      }
-    }
+    let index =
+      parseInt(e.target.parentElement.parentElement.childNodes[1].innerText) -
+      1; //欲刪除列的編號
     // console.log(index);
     if (deleteLine[index].style.display === "none") {
       deleteLine[index].style.display = "flex";
@@ -57,13 +70,9 @@ function Main(props) {
 
   const checkWant = (e) => {
     let deleteLine = document.querySelectorAll(".deleteLine_2");
-    let index = 0; //欲刪除列的編號
-    let item = e.target.parentElement.parentElement.childNodes[2].innerText; //找到要刪除那一列的資訊
-    for (index = 0; index < props.wantList.length; index++) {
-      if (props.wantList[index] === item) {
-        break;
-      }
-    }
+    let index =
+      parseInt(e.target.parentElement.parentElement.childNodes[1].innerText) -
+      1; //欲刪除列的編號
     // console.log(index);
     if (deleteLine[index].style.display === "none") {
       deleteLine[index].style.display = "flex";
@@ -73,20 +82,21 @@ function Main(props) {
   };
 
   return (
-    <div className="main">
+    <div className="main container mt-3">
       {props.needList.length > 0 && (
-        <table className="top">
+        <table className="table-striped top">
           <tbody>
             <tr>
               <td className="titleName">需要</td>
               <td className="message">
                 {props.needList.map((list, index) => (
                   <tr>
-                    <div className="deleteLine_1"></div>
+                    <div
+                      className="deleteLine_1"
+                      style={{ display: "none" }}
+                    ></div>
                     <td className="index">{index + 1} </td>
-                    <td className="msg">
-                      <p>{list}</p>
-                    </td>
+                    <td className="msg">{list}</td>
                     <td className="checkBtn">
                       <i className="fas fa-check" onClick={checkNeed}></i>
                     </td>
@@ -104,18 +114,19 @@ function Main(props) {
         <div className="line"></div>
       )}
       {props.wantList.length > 0 && (
-        <table className="down">
+        <table className="table-striped down">
           <tbody>
             <tr>
               <td className="titleName">想要</td>
               <td className="message">
                 {props.wantList.map((list, index) => (
                   <tr>
-                    <div className="deleteLine_2"></div>
+                    <div
+                      className="deleteLine_2"
+                      style={{ display: "none" }}
+                    ></div>
                     <td className="index">{index + 1} </td>
-                    <td className="msg">
-                      <p>{list}</p>
-                    </td>
+                    <td className="msg">{list}</td>
                     <td className="checkBtn">
                       <i className="fas fa-check" onClick={checkWant}></i>
                     </td>

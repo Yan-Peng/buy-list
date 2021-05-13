@@ -23,7 +23,6 @@ html, body, #root {
 
 .nav {
   background-color: #ee0606;
-  font-size: 2rem;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -34,6 +33,10 @@ html, body, #root {
       -ms-flex-align: center;
           align-items: center;
   height: 15vh;
+}
+
+.nav h1 {
+  font-size: 4rem;
 }
 
 .addList {
@@ -52,26 +55,25 @@ html, body, #root {
 }
 
 .addList form {
-  width: 50%;
+  width: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: space-evenly;
-      -ms-flex-pack: space-evenly;
-          justify-content: space-evenly;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
 }
 
 .addList form input {
-  width: 15vw;
+  width: 80%;
   height: 5vw;
-  font-size: 2.5rem;
+  font-size: 1.5rem;
 }
 
 .addList form select {
-  width: 5vw;
+  width: 80%;
   height: 5vw;
   font-size: 1.5rem;
 }
@@ -79,9 +81,8 @@ html, body, #root {
 .addList form button {
   width: 10vw;
   height: 5vw;
-  background-color: burlywood;
-  border-radius: 10px;
-  font-size: 2.5rem;
+  font-size: 2.5vw;
+  line-height: 1rem;
 }
 
 .main {
@@ -99,6 +100,7 @@ html, body, #root {
 }
 
 .main table {
+  width: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -112,7 +114,11 @@ html, body, #root {
   width: 70%;
 }
 
-.main table tr {
+.main table tbody {
+  width: 100%;
+}
+
+.main table tbody tr {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -121,24 +127,25 @@ html, body, #root {
           align-items: center;
 }
 
-.main table tr .titleName {
-  padding: 2vw 10vw 2vw 2vw;
-  font-size: 5rem;
+.main table tbody tr .titleName {
+  padding: 2vw;
+  font-size: 3vw;
+  width: 30%;
 }
 
-.main table tr .message tr {
+.main table tbody tr .message tr {
   position: relative;
 }
 
-.main table tr .message tr td {
+.main table tbody tr .message tr td {
   padding: 1vw;
 }
 
-.main table tr .message tr .msg {
+.main table tbody tr .message tr .msg {
   padding-right: 3vw;
 }
 
-.main table tr .message tr .deleteLine_1, .main table tr .message tr .deleteLine_2 {
+.main table tbody tr .message tr .deleteLine_1, .main table tbody tr .message tr .deleteLine_2 {
   position: absolute;
   top: 50%;
   z-index: 10;
@@ -148,7 +155,7 @@ html, body, #root {
   display: none;
 }
 
-.main table tr .message tr .checkBtn, .main table tr .message tr .clearBtn {
+.main table tbody tr .message tr .checkBtn, .main table tbody tr .message tr .clearBtn {
   cursor: pointer;
 }
 
@@ -169,7 +176,7 @@ footer {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  height: 10vh;
+  height: 13vh;
   background-image: url("../images/wave.png");
   background-size: cover;
   background-position: center;
